@@ -1,8 +1,8 @@
 <?php
-	define("SERVER","localhost");
-	define("DATABASE","QLBanHang");
-	define("USERNAME","root");
-	define("PASSWORD","");
+	define("SERVER","remotemysql.com");
+	define("DATABASE","4yRfI36w3r");
+	define("USERNAME","4yRfI36w3r");
+	define("PASSWORD","nYtKUp9bbG");
 
 	class DataProvider
 	{
