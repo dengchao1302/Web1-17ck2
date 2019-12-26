@@ -30,16 +30,14 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý sản phẩm</span>
+          <span>Sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý sản phẩm:</h6>
+          <h6 class="dropdown-header">Sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/ThemSanPham.php">Thêm sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/XoaSanPham.php">Xóa sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../SanPham/SuaSanPham.php">Sửa sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/LietKeSanPham.php">Liệt kê sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -48,16 +46,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý loại sản phẩm</span>
+          <span>Loại sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý loại sản phẩm:</h6>
+          <h6 class="dropdown-header">Loại sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/XoaLoaiSanPham.php">Xóa loại sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../LoaiSanPham/SuaLoaiSanPham.php">Sửa loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/LietKeLoaiSanPham.php">Liệt kê loại sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -66,16 +62,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý nhà sản xuất</span>
+          <span>Nhà sản xuất</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý nhà sản xuất:</h6>
+          <h6 class="dropdown-header">Nhà sản xuất:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/ThemNhaSanXuat.php">Thêm nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/XoaNhaSanXuat.php">Xóa nhà sản xuất</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../NhaSanXuat/SuaNhaSanXuat.php">Sửa nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/LietKeNhaSanXuat.php">Liệt kê nhà sản xuất</a>
           <div class="dropdown-divider"></div>
@@ -84,16 +78,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý tài khoản người dùng</span>
+          <span>Tài khoản người dùng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý tài khoản người dùng:</h6>
+          <h6 class="dropdown-header">Tài khoản người dùng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/ThemTaiKhoanNguoiDung.php">Thêm tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/XoaTaiKhoanNguoiDung.php">Xóa tài khoản người dùng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../TaiKhoanNguoiDung/SuaTaiKhoanNguoiDung.php">Sửa tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/LietKeTaiKhoanNguoiDung.php">Liệt kê tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
@@ -102,16 +94,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý đơn đặt hàng</span>
+          <span>Đơn đặt hàng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý đơn đặt hàng:</h6>
+          <h6 class="dropdown-header">Đơn đặt hàng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/ThemDonDatHang.php">Thêm đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/XoaDonDatHang.php">Xóa đơn đặt hàng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../DonDatHang/SuaDonDatHang.php">Sửa đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/LietKeDonDatHang.php">Liệt kê đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
@@ -169,52 +159,52 @@
                     </tr>
                     <?php
                     if ($check == 1) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: green"> Cập nhật thành công </td>
+                      </tr>
+                      <?php 
+                    } else if ($check == 0) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: red"> Cập nhật thất bại </td>
+                      </tr>
+                      <?php 
+                    }
                     ?>
+                  </tfoot>
+                  <tbody>
                     <tr>
-                      <td colspan="2"> Cập nhật thành công </td>
+                      <th>Mã nhà sản xuất:</th>
+                      <td><input type="text" name="MaNhaSanXuat"></td>
                     </tr>
-                    <?php 
-                  } else if ($check == 0) {
-                  ?>
-                  <tr>
-                    <td colspan="2"> Cập nhật thất bại </td>
-                  </tr>
-                  <?php 
-                }
-                ?>
-              </tfoot>
-              <tbody>
-                <tr>
-                  <th>Mã nhà sản xuất:</th>
-                  <td><input type="text" name="MaNhaSanXuat"></td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- /.container-fluid -->
     </div>
-  </div>
-  <!-- /.container-fluid -->
-</div>
-<!-- /#wrapper -->
-<!-- Bootstrap core JavaScript-->
-<script src="../../vendor/jquery/jquery.min.js"></script>
-<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Page level plugin JavaScript-->
-<script src="../../vendor/datatables/jquery.dataTables.js"></script>
-<script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="../../js/sb-admin.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../../js/sb-admin.min.js"></script>
 
-<!-- Demo scripts for this page-->
-<script src="../../js/demo/datatables-demo.js"></script>
+    <!-- Demo scripts for this page-->
+    <script src="../../js/demo/datatables-demo.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>

@@ -30,10 +30,10 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý sản phẩm</span>
+          <span>Sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý sản phẩm:</h6>
+          <h6 class="dropdown-header">Sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/ThemSanPham.php">Thêm sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -48,12 +48,12 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý loại sản phẩm</span>
+          <span>Loại sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý loại sản phẩm:</h6>
+          <h6 class="dropdown-header">Loại sản phẩm:</h6>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="./LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
+          <a class="dropdown-item" href="../LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/XoaLoaiSanPham.php">Xóa loại sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -66,10 +66,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý nhà sản xuất</span>
+          <span>Nhà sản xuất</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý nhà sản xuất:</h6>
+          <h6 class="dropdown-header">Nhà sản xuất:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/ThemNhaSanXuat.php">Thêm nhà sản xuất</a>
           <div class="dropdown-divider"></div>
@@ -84,10 +84,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý tài khoản người dùng</span>
+          <span>Tài khoản người dùng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý tài khoản người dùng:</h6>
+          <h6 class="dropdown-header">Tài khoản người dùng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/ThemTaiKhoanNguoiDung.php">Thêm tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
@@ -102,10 +102,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý đơn đặt hàng</span>
+          <span>Đơn đặt hàng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý đơn đặt hàng:</h6>
+          <h6 class="dropdown-header">Đơn đặt hàng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/ThemDonDatHang.php">Thêm đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
@@ -129,71 +129,131 @@
           <li class="breadcrumb-item">
             <a href="../index.php">Admin page</a>
           </li>
-          <li class="breadcrumb-item active">Loại sản phẩm</li>
+          <li class="breadcrumb-item active">Đơn đặt hàng</li>
         </ol>
 
-        <!-- DataTables Example -->
+        <?php
+        include_once("../../DBAccess/DataProvider.php");
+        $check = -1;
+        $curDateTime = '20' . date('y-m-d h:m:s');
+
+        $sql = "select * from TaiKhoan";
+        $listTK = DataProvider::execQuery($sql);
+        $sql = "select * from TinhTrang";
+        $listTT = DataProvider::execQuery($sql);
+
+        if(isset($_POST["btnAdd"]))
+        {
+          $maDonDatHang = $_POST["MaDonDatHang"];
+          $tongThanhTien = $_POST["TongThanhTien"];
+          $maTaiKhoan = $_POST["MaTaiKhoan"];
+          $maTinhTrang = $_POST["MaTinhTrang"];
+          $sql = "insert into DonDatHang(MaDonDatHang,NgayLap,TongThanhTien,MaTaiKhoan,MaTinhTrang) values ('". $maDonDatHang ."','". $curDateTime ."', '" . $tongThanhTien ."', '" . $maTaiKhoan ."', '" . $maTinhTrang ."')";
+          //DataProvider::execQuery($sql);
+          $check = DataProvider::execQ($sql);
+        }
+        ?>
+
         <div class="card mb-3">
           <div class="card-header">
-            Thêm sản phẩm</div>
+          Thêm đơn đặt hàng</div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <col width="20%">
-                <col width="80%">
-                <thead>
-                  <tr>
-                    <th>Tên trường</th>
-                    <th>Giá trị</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <input type="submit" value="Thêm" />
-                      <input type="reset" value="Reset" />
-                      <input type="button" value="Quay lại" />
-                    </td>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <th>Mã đơn đặt hàng:</th>
-                    <td><input type="text" name="MaDonDatHang"></td>
-                  </tr>
-                  <tr>
-                    <th>Tổng tiền:</th>
-                    <td><input type="text" name="TongThanhTien"></td>
-                  </tr>
-                  <tr>
-                    <th>Mã tài khoản:</th>
-                    <td><input type="text" name="MaTaiKhoan"></td>
-                  </tr>
-                  <tr>
-                    <th>Tình trạng:</th>
-                    <td><input type="text" name="MaTinhTrang"></td>
-                  </tr>
-                </tbody>
-              </table>
+              <form action="ThemDonDatHang.php" method="POST" name="frmThem" id="frmThem">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <col width="20%">
+                  <col width="80%">
+                  <thead>
+                    <tr>
+                      <th>Tên trường</th>
+                      <th>Giá trị</th>
+                    </tr>
+                    <?php
+                    if ($check == 1) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: green"> Thêm tài khoản thành công </td>
+                      </tr>
+                      <?php 
+                    } else if ($check == 0) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: red"> Thêm tài khoản thất bại </td>
+                      </tr>
+                      <?php 
+                    }
+                    ?>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="submit" name="btnAdd" value="Thêm" />
+                      </td>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <th>Mã đơn đặt hàng:</th>
+                      <td><input type="text" name="MaDonDatHang"></td>
+                    </tr>
+                    <tr>
+                      <th>Tổng tiền:</th>
+                      <td><input type="number" name="TongThanhTien"></td>
+                    </tr>
+                    <tr>
+                      <th>Tài khoản:</th>
+                      <td>
+                        <select name="MaTaiKhoan">
+                          <?php
+                          while ($row = mysqli_fetch_array($listTK)) {
+                            ?>
+                            <option value="<?php echo $row["MaTaiKhoan"]; ?>">
+                              <?php echo $row["TenHienThi"]; ?>
+                            </option>
+                            <?php
+                          }
+                          ?>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Tình trạng:</th>
+                      <td>
+                        <select name="MaTinhTrang">
+                          <?php
+                          while ($row = mysqli_fetch_array($listTT)) {
+                            ?>
+                            <option value="<?php echo $row["MaTinhTrang"]; ?>">
+                              <?php echo $row["TenTinhTrang"]; ?>
+                            </option>
+                            <?php
+                          }
+                          ?>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <!-- /.container-fluid -->
-  </div>
-  <!-- /#wrapper -->
-  <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>

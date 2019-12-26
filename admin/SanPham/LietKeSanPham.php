@@ -30,16 +30,14 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý sản phẩm</span>
+          <span>Sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý sản phẩm:</h6>
+          <h6 class="dropdown-header">Sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/ThemSanPham.php">Thêm sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/XoaSanPham.php">Xóa sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../SanPham/SuaSanPham.php">Sửa sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/LietKeSanPham.php">Liệt kê sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -48,16 +46,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý loại sản phẩm</span>
+          <span>Loại sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý loại sản phẩm:</h6>
+          <h6 class="dropdown-header">Loại sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/XoaLoaiSanPham.php">Xóa loại sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../LoaiSanPham/SuaLoaiSanPham.php">Sửa loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/LietKeLoaiSanPham.php">Liệt kê loại sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -66,16 +62,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý nhà sản xuất</span>
+          <span>Nhà sản xuất</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý nhà sản xuất:</h6>
+          <h6 class="dropdown-header">Nhà sản xuất:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/ThemNhaSanXuat.php">Thêm nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/XoaNhaSanXuat.php">Xóa nhà sản xuất</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../NhaSanXuat/SuaNhaSanXuat.php">Sửa nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/LietKeNhaSanXuat.php">Liệt kê nhà sản xuất</a>
           <div class="dropdown-divider"></div>
@@ -84,16 +78,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý tài khoản người dùng</span>
+          <span>Tài khoản người dùng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý tài khoản người dùng:</h6>
+          <h6 class="dropdown-header">Tài khoản người dùng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/ThemTaiKhoanNguoiDung.php">Thêm tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/XoaTaiKhoanNguoiDung.php">Xóa tài khoản người dùng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../TaiKhoanNguoiDung/SuaTaiKhoanNguoiDung.php">Sửa tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/LietKeTaiKhoanNguoiDung.php">Liệt kê tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
@@ -102,16 +94,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý đơn đặt hàng</span>
+          <span>Đơn đặt hàng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý đơn đặt hàng:</h6>
+          <h6 class="dropdown-header">Đơn đặt hàng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/ThemDonDatHang.php">Thêm đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/XoaDonDatHang.php">Xóa đơn đặt hàng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../DonDatHang/SuaDonDatHang.php">Sửa đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/LietKeDonDatHang.php">Liệt kê đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
@@ -132,50 +122,51 @@
           <li class="breadcrumb-item active">Sản phẩm</li>
         </ol>
 
-        <!-- DataTables Example -->
+        <?php include_once("../../DBAccess/DataProvider.php"); ?>
+
         <div class="card mb-3">
           <div class="card-header">
-            Thêm sản phẩm</div>
+          Liệt kê sản phẩm</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
-                <col width="10%">
                 <thead>
                   <tr>
                     <th>Mã sản phẩm</th>
                     <th>Tên sản phẩm</th>
-                    <th>Hình</th>
                     <th>Giá</th>
                     <th>Ngày nhập</th>
                     <th>Số lượng tồn</th>
-                    <th>Số lượng xem</th>
                     <th>Số lượng bán</th>
+                    <th>Số lượng xem</th>
                     <th>Loại sản phẩm</th>
                     <th>Nhà sản xuất</th>
+                    <th>Mô tả</th>
+                    <th>Bị xóa</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>                    
-                    <td>Mã sản phẩm</td>
-                    <td>Tên sản phẩm</td>
-                    <td>Hình</td>
-                    <td>Giá</td>
-                    <td>Ngày nhập</td>
-                    <td>Số lượng tồn</td>
-                    <td>Số lượng xem</td>
-                    <td>Số lượng bán</td>
-                    <td>Loại sản phẩm</td>
-                    <td>Nhà sản xuất</td>
-                  </tr>
+                  <?php
+                  $sql = "select * from SanPham left join LoaiSanPham on SanPham.MaLoaiSanPham = LoaiSanPham.MaLoaiSanPham left join HangSanXuat on SanPham.MaHangSanXuat = HangSanXuat.MaHangSanXuat";
+                  $list = DataProvider::execQuery($sql);
+                  while ($row = mysqli_fetch_array($list)) {
+                    ?>
+                    <tr>
+                      <td><a href="SuaSanPham.php?id=<?php echo $row["MaSanPham"]; ?>"><?php echo $row["MaSanPham"]; ?></a></td>
+                      <td><?php echo $row["TenSanPham"]; ?></td>
+                      <td><?php echo $row["GiaSanPham"]; ?></td>
+                      <td><?php echo $row["NgayNhap"]; ?></td>
+                      <td><?php echo $row["SoLuongTon"]; ?></td>
+                      <td><?php echo $row["SoLuongBan"]; ?></td>
+                      <td><?php echo $row["SoLuotXem"]; ?></td>
+                      <td><?php echo $row["TenLoaiSanPham"]; ?></td>
+                      <td><?php echo $row["TenHangSanXuat"]; ?></td>
+                      <td><?php echo $row["MoTa"]; ?></td>
+                      <td><?php echo $row["BiXoa"]; ?></td>
+                    </tr>
+                    <?php
+                  }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -183,19 +174,19 @@
         </div>
       </div>
       <!-- /.container-fluid -->
-  </div>
-  <!-- /#wrapper -->
-  <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>

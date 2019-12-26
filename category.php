@@ -2,13 +2,17 @@
 include_once("DBAccess/DataProvider.php");
 $list = null;
 $itemId = "";
-if (isset($_GET["itemID"]) && $_GET["itemID"] != "") {
-	$sql = "select * from SanPham left join LoaiSanPham on SanPham.MaLoaiSanPham = LoaiSanPham.MaLoaiSanPham left join HangSanXuat on SanPham.MaHangSanXuat = HangSanXuat.MaHangSanXuat where MaSanPham = '" . $_GET["itemID"] . "' ";
+if (isset($_GET["id"]) && $_GET["id"] != "" && isset($_GET["type"]) && $_GET["type"] != "") {
+	$sql = "select * from SanPham left join LoaiSanPham on SanPham.MaLoaiSanPham = LoaiSanPham.MaLoaiSanPham left join HangSanXuat on SanPham.MaHangSanXuat = HangSanXuat.MaHangSanXuat ";
+	if ($_GET["type"] == '1') {
+		$sql = $sql . "where SanPham.MaLoaiSanPham = '" . $_GET["id"] . "' ";
+	} else {
+		$sql = $sql . "where SanPham.MaHangSanXuat = '" . $_GET["id"] . "' ";
+	}
+
 	$list = DataProvider::execQuery($sql);
 	if (mysqli_num_rows($list) == 0) {
 		header('Location: index.php');
-	} else {
-
 	}
 } else {
 	header('Location: index.php');
@@ -104,36 +108,7 @@ if (isset($_GET["itemID"]) && $_GET["itemID"] != "") {
 				Item Detail
 			</a>
 		</nav>
-		<nav class="navbar navbar-light bg-light">
-			<p>Giá bán</p>
-			<p>Số lượt xem</p>
-			<p>Số lượng bán</p>
-			<p>Mô tả</p>
-			<p>Xuất xứ</p>
-			<p>Nhà sản xuất</p>
-		</nav>
 		<?php
-		while ($row = mysqli_fetch_array($list)) {
-			?>
-			<nav class="navbar navbar-light bg-light">
-				<p><?php echo $row["GiaSanPham"]; ?></p>
-				<p><?php echo $row["SoLuotXem"]; ?></p>
-				<p><?php echo $row["SoLuongBan"]; ?></p>
-				<p><?php echo $row["MoTa"]; ?></p>
-				<p><?php echo $row["TenHangSanXuat"]; ?></p>
-				<p><?php echo $row["TenLoaiSanPham"]; ?></p>
-			</nav>
-			<?php 
-			$sql = "update SanPham set SoLuotXem=" . ((int)$row["SoLuotXem"] + 1) . " where MaSanPham = '" . $row["MaSanPham"] . "' ";
-			DataProvider::execQ($sql);
-		} ?>
-	</div>
-	<div class="container">
-		<h2>Các sản phẩm liên quan</h2>
-		<p>Danh sách 5 sản phẩm bán liên quan:</p>
-		<?php
-		$sql = "select * from SanPham where MaLoaiSanPham = ( select MaLoaiSanPham from SanPham where MaSanPham = '" . $_GET["itemID"] . "' ) LIMIT 5";
-		$list = DataProvider::execQuery($sql);
 		while ($row = mysqli_fetch_array($list)) {
 			?>
 			<ul class="nav">

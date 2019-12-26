@@ -19,6 +19,18 @@
 	$listSPnew = DataProvider::execQuery($sql);
 	$sql = "select * from SanPham where BiXoa = '0' order by SoLuongBan DESC LIMIT 10 ";
 	$listSPhot= DataProvider::execQuery($sql);
+	$isLogged = false;
+	$tenHienThi = "";
+	$itemUrl = "";
+	if (isset($_GET["userid"]) && $_GET["userid"] != "") {
+		$isLogged = true;
+		$sql = "select * from TaiKhoan where MaTaiKhoan = '" . $_GET["userid"] . "' ";
+		$list = DataProvider::execQuery($sql);
+		while ($row = mysqli_fetch_array($list)) {
+			$tenHienThi = $row["TenHienThi"];
+		}
+		$itemUrl = '&userid=' . $_GET["userid"];
+	}
 	?>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +49,7 @@
 						<?php
 						while ($row = mysqli_fetch_array($listLSP)) {
 							?>
-							<a class="dropdown-item" href="#"><?php echo $row["TenLoaiSanPham"]; ?></a>
+							<a class="dropdown-item" href="category.php?type=1&id=<?php echo $row["MaLoaiSanPham"]. $itemUrl; ?>"><?php echo $row["TenLoaiSanPham"]; ?></a>
 							<?php
 						}
 						?>
@@ -51,7 +63,7 @@
 						<?php
 						while ($row = mysqli_fetch_array($listNSX)) {
 							?>
-							<a class="dropdown-item" href="#"><?php echo $row["TenHangSanXuat"]; ?></a>
+							<a class="dropdown-item" href="category.php?type=2&id=<?php echo $row["MaHangSanXuat"] . $itemUrl; ?>"><?php echo $row["TenHangSanXuat"]; ?></a>
 							<?php
 						}
 						?>
@@ -59,8 +71,12 @@
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="detail.php">
-				<a class="nav-link" href="login.php">Đăng nhập</a>
-				<a class="nav-link" href="register.php">Đăng ký</a>
+				<?php if (!$isLogged) { ?>
+					<a class="nav-link" href="login.php">Đăng nhập</a>
+					<a class="nav-link" href="register.php">Đăng ký</a>
+				<?php } else { ?>
+					<a class="nav-link" href="user/giohang.php?userid=<?php echo $_GET["userid"]; ?>"><?php echo $tenHienThi; ?></a>
+				<?php } ?>
 				<input class="form-control mr-sm-2" type="search" placeholder="Tên sản phẩm" aria-label="Search" id="itemName" name="itemName">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
 			</form>
@@ -77,7 +93,7 @@
 				$i++;
 				?>
 				<li class="nav-item">
-					<a class="nav-link" href="detail.php?itemID=<?php echo $row["MaSanPham"]; ?>"><?php echo $row["TenSanPham"]; ?></a>
+					<a class="nav-link" href="detail.php?itemID=<?php echo $row["MaSanPham"] . $itemUrl; ?>"><?php echo $row["TenSanPham"]; ?></a>
 				</li>
 				<?php
 				if ($i == 5) {

@@ -30,16 +30,14 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý sản phẩm</span>
+          <span>Sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý sản phẩm:</h6>
+          <h6 class="dropdown-header">Sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/ThemSanPham.php">Thêm sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/XoaSanPham.php">Xóa sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../SanPham/SuaSanPham.php">Sửa sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../SanPham/LietKeSanPham.php">Liệt kê sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -48,16 +46,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý loại sản phẩm</span>
+          <span>Loại sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý loại sản phẩm:</h6>
+          <h6 class="dropdown-header">Loại sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/XoaLoaiSanPham.php">Xóa loại sản phẩm</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../LoaiSanPham/SuaLoaiSanPham.php">Sửa loại sản phẩm</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../LoaiSanPham/LietKeLoaiSanPham.php">Liệt kê loại sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -66,16 +62,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý nhà sản xuất</span>
+          <span>Nhà sản xuất</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý nhà sản xuất:</h6>
+          <h6 class="dropdown-header">Nhà sản xuất:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/ThemNhaSanXuat.php">Thêm nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/XoaNhaSanXuat.php">Xóa nhà sản xuất</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../NhaSanXuat/SuaNhaSanXuat.php">Sửa nhà sản xuất</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../NhaSanXuat/LietKeNhaSanXuat.php">Liệt kê nhà sản xuất</a>
           <div class="dropdown-divider"></div>
@@ -84,16 +78,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý tài khoản người dùng</span>
+          <span>Tài khoản người dùng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý tài khoản người dùng:</h6>
+          <h6 class="dropdown-header">Tài khoản người dùng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/ThemTaiKhoanNguoiDung.php">Thêm tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/XoaTaiKhoanNguoiDung.php">Xóa tài khoản người dùng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../TaiKhoanNguoiDung/SuaTaiKhoanNguoiDung.php">Sửa tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../TaiKhoanNguoiDung/LietKeTaiKhoanNguoiDung.php">Liệt kê tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
@@ -102,16 +94,14 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý đơn đặt hàng</span>
+          <span>Đơn đặt hàng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý đơn đặt hàng:</h6>
+          <h6 class="dropdown-header">Đơn đặt hàng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/ThemDonDatHang.php">Thêm đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/XoaDonDatHang.php">Xóa đơn đặt hàng</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../DonDatHang/SuaDonDatHang.php">Sửa đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../DonDatHang/LietKeDonDatHang.php">Liệt kê đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
@@ -129,90 +119,131 @@
           <li class="breadcrumb-item">
             <a href="../index.php">Admin page</a>
           </li>
-          <li class="breadcrumb-item active">Sản phẩm</li>
+          <li class="breadcrumb-item active">Tài khoản</li>
         </ol>
 
-        <!-- DataTables Example -->
+        <?php
+        include_once("../../DBAccess/DataProvider.php");
+        $check = -1;
+
+        $sql = "select * from LoaiTaiKhoan";
+        $listLTK = DataProvider::execQuery($sql);
+
+        if(isset($_POST["btnAdd"]))
+        {
+          $tenDangNhap = $_POST["TenDangNhap"];
+          $matKhau = $_POST["MatKhau"];
+          $tenHienThi = $_POST["TenHienThi"];
+          $diaChi = $_POST["DiaChi"];
+          $dienThoai = $_POST["DienThoai"];
+          $email = $_POST["Email"];
+          $maLoaiTaiKhoan = $_POST["MaLoaiTaiKhoan"];
+          $sql = "insert into TaiKhoan(TenDangNhap,MatKhau,TenHienThi,DiaChi,DienThoai,Email,MaLoaiTaiKhoan) values ('". $tenDangNhap ."', '" . $matKhau ."', '" . $tenHienThi ."', '" . $diaChi ."', '" . $dienThoai ."', '" . $email ."', '" . $maLoaiTaiKhoan ."')";
+          //DataProvider::execQuery($sql);
+          $check = DataProvider::execQ($sql);
+        }
+        ?>
+
         <div class="card mb-3">
           <div class="card-header">
-            Thêm sản phẩm</div>
+          Thêm tài khoản</div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <col width="20%">
-                <col width="80%">
-                <thead>
-                  <tr>
-                    <th>Tên trường</th>
-                    <th>Giá trị</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <input type="submit" value="Thêm" />
-                      <input type="reset" value="Reset" />
-                      <input type="button" value="Quay lại" />
-                    </td>
-                  </tr>
-                </tfoot>
-                <tbody>
-                    <th>Mã tài khoản:</th>
-                    <td><input type="text" name="MaTaiKhoan"></td>
-                  </tr>
-                  <tr>
-                    <th>Tên đăng nhập:</th>
-                    <td><input type="text" name="TenDangNhap"></td>
-                  </tr>
-                  <tr>
-                    <th>Mật khẩu:</th>
-                    <td><input type="text" name="MatKhau"></td>
-                  </tr>
-                  <tr>
-                    <th>Tên hiển thị:</th>
-                    <td><input type="text" name="TenHienThi"></td>
-                  </tr>
-                  <tr>
-                    <th>Địa chỉ:</th>
-                    <td><input type="text" name="DiaChi"></td>
-                  </tr>
-                  <tr>
-                    <th>Số điện thoại:</th>
-                    <td><input type="text" name="DienThoai"></td>
-                  </tr>
-                  <tr>
-                    <th>Email:</th>
-                    <td><input type="text" name="Email"></td>
-                  </tr>
-                  <tr>
-                    <th>Bị xóa:</th>
-                    <td><input type="text" name="BiXoa"></td>
-                  </tr>
-                  <tr>
-                    <th>Loại tài khoản:</th>
-                    <td><input type="text" name="MaLoaiTaiKhoan"></td>
-                  </tr>
-                </tbody>
-              </table>
+              <form action="ThemTaiKhoanNguoiDung.php" method="POST" name="frmThem" id="frmThem">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <col width="20%">
+                  <col width="80%">
+                  <thead>
+                    <tr>
+                      <th>Tên trường</th>
+                      <th>Giá trị</th>
+                    </tr>
+                    <?php
+                    if ($check == 1) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: green"> Thêm tài khoản thành công </td>
+                      </tr>
+                      <?php 
+                    } else if ($check == 0) {
+                      ?>
+                      <tr>
+                        <td colspan="2" style="background-color: red"> Thêm tài khoản thất bại </td>
+                      </tr>
+                      <?php 
+                    }
+                    ?>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="submit" name="btnAdd" value="Thêm" />
+                      </td>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <th>Tên đăng nhập:</th>
+                      <td><input type="text" name="TenDangNhap"></td>
+                    </tr>
+                    <tr>
+                      <th>Mật khẩu:</th>
+                      <td><input type="password" name="MatKhau"></td>
+                    </tr>
+                    <tr>
+                      <th>Tên hiển thị:</th>
+                      <td><input type="text" name="TenHienThi"></td>
+                    </tr>
+                    <tr>
+                      <th>Địa chỉ:</th>
+                      <td><input type="text" name="DiaChi"></td>
+                    </tr>
+                    <tr>
+                      <th>Số điện thoại:</th>
+                      <td><input type="text" name="DienThoai"></td>
+                    </tr>
+                    <tr>
+                      <th>Email:</th>
+                      <td><input type="text" name="Email"></td>
+                    </tr>
+                    <tr>
+                      <th>Loại tài khoản:</th>
+                      <td>
+                        <select name="MaLoaiTaiKhoan">
+                          <?php
+                          while ($row = mysqli_fetch_array($listLTK)) {
+                            ?>
+                            <option value="<?php echo $row["MaLoaiTaiKhoan"]; ?>">
+                              <?php echo $row["TenLoaiTaiKhoan"]; ?>
+                            </option>
+                            <?php
+                          }
+                          ?>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <!-- /.container-fluid -->
-  </div>
-  <!-- /#wrapper -->
-  <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="../../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../vendor/datatables/dataTables.bootstrap4.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>

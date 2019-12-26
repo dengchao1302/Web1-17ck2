@@ -1,3 +1,43 @@
+<?php
+include_once("DBAccess/DataProvider.php");
+$check = -1;
+
+if(isset($_POST["btnRegister"]))
+{
+	$tenHienThi = $_POST["TenHienThi"];
+	$diaChi = $_POST["DiaChi"];
+	$dienThoai = $_POST["DienThoai"];
+	$email = $_POST["Email"];
+	$tenDangNhap = $_POST["TenDangNhap"];
+	$matKhau = $_POST["MatKhau"];
+	$sql = "select * from TaiKhoan where TenDangNhap = '" . $tenDangNhap . "' ";
+          //DataProvider::execQuery($sql);
+	$list = DataProvider::execQuery($sql);
+
+	if (mysqli_num_rows($list) == 0) {
+
+		$sql = "insert into TaiKhoan(TenDangNhap,MatKhau,TenHienThi,DiaChi,DienThoai,Email,MaLoaiTaiKhoan) values ('". $tenDangNhap ."', '" . $matKhau ."', '" . $tenHienThi ."', '" . $diaChi ."', '" . $dienThoai ."', '" . $email ."', '1')";
+		$check = DataProvider::execQ($sql);
+
+		if ($check == 1) {
+			$sql = "select * from TaiKhoan where TenDangNhap = '" . $tenDangNhap . "' and MatKhau = '" . $matKhau . "' ";
+          //DataProvider::execQuery($sql);
+			$list = DataProvider::execQuery($sql);
+			$userid = 0;
+			while ($row = mysqli_fetch_array($list)) {
+				$userid = $row["MaTaiKhoan"];
+			}
+			header('Location: index.php?userid='.$userid);
+		}
+
+		header('Location: index.php?userid='.$userid);
+	} else {
+		$check = 0;
+	}
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,52 +69,45 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 order-md-1">
+				<?php if ($check == 0) { ?>
+					<h3 style="color: red" class="mb-3">Đăng ký tài khoản thất bại. Thử lại sau.</h3>
+				<?php } ?>
 				<h4 class="mb-3">Thông tin cá nhân</h4>
-				<form class="needs-validation" novalidate="">
+				<form class="needs-validation" novalidate="" action="register.php" method="POST">
 					<div class="mb-3">
-						<label for="username">Họ tên của bạn</label>
+						<label for="TenHienThi">Họ tên của bạn</label>
 						<div class="input-group">
-							<input type="text" class="form-control" id="username" placeholder="Họ tên" required="">
+							<input type="text" class="form-control" id="TenHienThi" name="TenHienThi" placeholder="Họ tên" required="">
 							<div class="invalid-feedback" style="width: 100%;">
 								Hãy nhập họ tên.
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-3 mb-3">
-							<label for="country">Ngày sinh</label>
-							<select class="custom-select d-block w-100" id="country" required="">
-								<option value="">1</option>
-								<option>2</option>
-							</select>
-							<div class="invalid-feedback">
-								Hãy chọn 1 ngày hợp lệ
+					<div class="mb-3">
+						<label for="DiaChi">Địa chỉ của bạn</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="DiaChi" name="DiaChi" placeholder="Địa chỉ" required="">
+							<div class="invalid-feedback" style="width: 100%;">
+								Hãy nhập địa chỉ
 							</div>
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="state">Tháng sinh</label>
-							<select class="custom-select d-block w-100" id="state" required="">
-								<option value="">1</option>
-								<option>2</option>
-							</select>
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="state">Năm sinh</label>
-							<select class="custom-select d-block w-100" id="state" required="">
-								<option value="">1990</option>
-								<option>1991</option>
-							</select>
 						</div>
 					</div>
 					<div class="mb-3">
-						<div class="row">							
-						<div class="col-md-3 mb-3">
-							<label for="state">Bạn sống tại</label>
-							<select class="custom-select d-block w-100" id="state" required="">
-								<option value="">TP.HCM</option>
-								<option>HN</option>
-							</select>
+						<label for="DienThoai">Số điện thoại</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="DienThoai" name="DienThoai" placeholder="Điện thoại" required="">
+							<div class="invalid-feedback" style="width: 100%;">
+								Hãy nhập số điện thoại.
+							</div>
 						</div>
+					</div>
+					<div class="mb-3">
+						<label for="Email">Email</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="Email" name="Email" placeholder="Email" required="">
+							<div class="invalid-feedback" style="width: 100%;">
+								Hãy nhập email.
+							</div>
 						</div>
 					</div>
 
@@ -82,34 +115,24 @@
 						<h4>Thông tin tài khoản</h4>
 					</div>
 					<div class="mb-3">
-						<label for="userid">Tên đăng nhập</label>
+						<label for="TenDangNhap">Tên đăng nhập</label>
 						<div class="input-group">
-							<input type="text" class="form-control" id="userid" placeholder="Họ tên" required="">
-							<button class="btn btn-primary" type="button">Kiểm tra</button>
+							<input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" placeholder="Tên đăng nhập" required="">
 							<div class="invalid-feedback" style="width: 100%;">
 								Hãy nhập tên đăng nhập
 							</div>
 						</div>
 					</div>
 					<div class="mb-3">
-						<label for="password">Mật khẩu</label>
+						<label for="MatKhau">Mật khẩu</label>
 						<div class="input-group">
-							<input type="password" class="form-control" id="password" required="">
+							<input type="password" class="form-control" id="MatKhau" name="MatKhau" placeholder="Mật khẩu" required="">
 							<div class="invalid-feedback" style="width: 100%;">
 								Hãy nhập mật khẩu
 							</div>
 						</div>
 					</div>
-					<div class="mb-3">
-						<label for="rePassword">Xác nhận mật khẩu</label>
-						<div class="input-group">
-							<input type="password" class="form-control" id="rePassword" required="">
-							<div class="invalid-feedback" style="width: 100%;">
-								Hãy nhập mật khẩu
-							</div>
-						</div>
-					</div>
-					<button class="btn btn-primary btn-lg btn-block" type="submit">Đăng ký</button>
+					<button class="btn btn-primary btn-lg btn-block" type="submit" name="btnRegister">Đăng ký</button>
 				</form>
 			</div>
 		</div>

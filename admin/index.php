@@ -30,10 +30,10 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý sản phẩm</span>
+          <span>Sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý sản phẩm:</h6>
+          <h6 class="dropdown-header">Sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="SanPham/ThemSanPham.php">Thêm sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -48,10 +48,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý loại sản phẩm</span>
+          <span>Loại sản phẩm</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý loại sản phẩm:</h6>
+          <h6 class="dropdown-header">Loại sản phẩm:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="LoaiSanPham/ThemLoaiSanPham.php">Thêm loại sản phẩm</a>
           <div class="dropdown-divider"></div>
@@ -66,10 +66,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý nhà sản xuất</span>
+          <span>Nhà sản xuất</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý nhà sản xuất:</h6>
+          <h6 class="dropdown-header">Nhà sản xuất:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="NhaSanXuat/ThemNhaSanXuat.php">Thêm nhà sản xuất</a>
           <div class="dropdown-divider"></div>
@@ -84,10 +84,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý tài khoản người dùng</span>
+          <span>Tài khoản người dùng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý tài khoản người dùng:</h6>
+          <h6 class="dropdown-header">Tài khoản người dùng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="TaiKhoanNguoiDung/ThemTaiKhoanNguoiDung.php">Thêm tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
@@ -97,15 +97,15 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="TaiKhoanNguoiDung/LietKeTaiKhoanNguoiDung.php">Liệt kê tài khoản người dùng</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="TaiKhoanNguoiDung/TimkiemTaiKhoanNguoiDung.php">Tìm kiếm tài khoản người dùng</a>
+          <a class="dropdown-item" href="TaiKhoanNguoiDung/TimKiemTaiKhoanNguoiDung.php">Tìm kiếm tài khoản người dùng</a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span>Quản lý đơn đặt hàng</span>
+          <span>Đơn đặt hàng</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Quản lý đơn đặt hàng:</h6>
+          <h6 class="dropdown-header">Đơn đặt hàng:</h6>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="DonDatHang/ThemDonDatHang.php">Thêm đơn đặt hàng</a>
           <div class="dropdown-divider"></div>
