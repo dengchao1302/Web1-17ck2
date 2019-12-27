@@ -39,6 +39,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "" && isset($_GET["type"]) && $_GET["ty
 	$isLogged = false;
 	$tenHienThi = "";
 	$itemUrl = "";
+	$typeName ="";
 	if (isset($_GET["userid"]) && $_GET["userid"] != "") {
 		$isLogged = true;
 		$sql = "select * from TaiKhoan where MaTaiKhoan = '" . $_GET["userid"] . "' ";
@@ -68,6 +69,11 @@ if (isset($_GET["id"]) && $_GET["id"] != "" && isset($_GET["type"]) && $_GET["ty
 							?>
 							<a class="dropdown-item" href="category.php?type=1&id=<?php echo $row["MaLoaiSanPham"] . $itemUrl; ?>"><?php echo $row["TenLoaiSanPham"]; ?></a>
 							<?php
+							if ($_GET["type"] == '1') { 
+								if ($_GET["id"] == $row["MaLoaiSanPham"]) {
+									$typeName = $row["TenLoaiSanPham"];
+								}
+							}
 						}
 						?>
 					</div>
@@ -82,8 +88,12 @@ if (isset($_GET["id"]) && $_GET["id"] != "" && isset($_GET["type"]) && $_GET["ty
 							?>
 							<a class="dropdown-item" href="category.php?type=2&id=<?php echo $row["MaHangSanXuat"] . $itemUrl; ?>"><?php echo $row["TenHangSanXuat"]; ?></a>
 							<?php
-						}
-						?>
+							if ($_GET["type"] == '2') { 
+								if ($_GET["id"] == $row["MaHangSanXuat"]) {
+									$typeName = $row["TenHangSanXuat"];
+								}
+							}
+						} ?>
 					</div>
 				</li>
 			</ul>
@@ -105,18 +115,29 @@ if (isset($_GET["id"]) && $_GET["id"] != "" && isset($_GET["type"]) && $_GET["ty
 		<nav class="navbar navbar-light bg-light">
 			<a class="navbar-brand" href="#">
 				<img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-				Item Detail
+				<?php if ($_GET["type"] == '1') { 
+					echo "Loại sản phẩm: " . $typeName;
+				} else {
+					echo "Hãng sản xuất: " . $typeName;
+				} ?>
 			</a>
 		</nav>
-		<?php
-		while ($row = mysqli_fetch_array($list)) {
-			?>
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link" href="detail.php?itemID=<?php echo $row['MaSanPham'] . $itemUrl ?>"><?php echo $row['TenSanPham'] ?></a>
-				</li>
-			</ul>
-		<?php } ?>
+		<table>
+			<col width="50%">
+			<col width="50%">
+			<tr>
+				<?php while ($row = mysqli_fetch_array($list)) { ?>
+				<tr>
+				<td>
+					<img src="images/<?php echo $row["HinhURL"]; ?>" width="60" height="60" alt="">
+				</td>
+				<td>
+					<a class="nav-link navbar-text" href="detail.php?itemID=<?php echo $row["MaSanPham"] . $itemUrl; ?>"><?php echo $row["TenSanPham"]; ?></a>
+				</td>
+				<tr>
+				<?php } ?>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>

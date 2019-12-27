@@ -18,7 +18,7 @@ if (isset($_GET["itemID"]) && $_GET["itemID"] != "") {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Item details</title>
+	<title>Chi tiết sản phẩm</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -44,6 +44,7 @@ if (isset($_GET["itemID"]) && $_GET["itemID"] != "") {
 		}
 		$itemUrl = '&userid=' . $_GET["userid"];
 	}
+
 	?>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -101,47 +102,77 @@ if (isset($_GET["itemID"]) && $_GET["itemID"] != "") {
 		<nav class="navbar navbar-light bg-light">
 			<a class="navbar-brand" href="#">
 				<img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-				Item Detail
-			</a>
-		</nav>
-		<nav class="navbar navbar-light bg-light">
-			<p>Giá bán</p>
-			<p>Số lượt xem</p>
-			<p>Số lượng bán</p>
-			<p>Mô tả</p>
-			<p>Xuất xứ</p>
-			<p>Nhà sản xuất</p>
-		</nav>
-		<?php
-		while ($row = mysqli_fetch_array($list)) {
-			?>
-			<nav class="navbar navbar-light bg-light">
-				<p><?php echo $row["GiaSanPham"]; ?></p>
-				<p><?php echo $row["SoLuotXem"]; ?></p>
-				<p><?php echo $row["SoLuongBan"]; ?></p>
-				<p><?php echo $row["MoTa"]; ?></p>
-				<p><?php echo $row["TenHangSanXuat"]; ?></p>
-				<p><?php echo $row["TenLoaiSanPham"]; ?></p>
+				<h2>Chi tiết sản phẩm<h2>
+				</a>
 			</nav>
-			<?php 
-			$sql = "update SanPham set SoLuotXem=" . ((int)$row["SoLuotXem"] + 1) . " where MaSanPham = '" . $row["MaSanPham"] . "' ";
-			DataProvider::execQ($sql);
-		} ?>
-	</div>
-	<div class="container">
-		<h2>Các sản phẩm liên quan</h2>
-		<p>Danh sách 5 sản phẩm bán liên quan:</p>
-		<?php
-		$sql = "select * from SanPham where MaLoaiSanPham = ( select MaLoaiSanPham from SanPham where MaSanPham = '" . $_GET["itemID"] . "' ) LIMIT 5";
-		$list = DataProvider::execQuery($sql);
-		while ($row = mysqli_fetch_array($list)) {
-			?>
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link" href="detail.php?itemID=<?php echo $row['MaSanPham'] . $itemUrl ?>"><?php echo $row['TenSanPham'] ?></a>
-				</li>
-			</ul>
-		<?php } ?>
-	</div>
-</body>
-</html>
+			<form class="form" action="detail" method="POST">
+				<table>
+					<col width="50%">
+					<col width="50%">
+					<?php while ($row = mysqli_fetch_array($list)) { ?>
+						<tr>
+							<th>Giá bán</th>
+							<td><?php echo $row["GiaSanPham"]; ?></td>
+						</tr>
+						<tr>
+							<th>Số lượt xem</th>
+							<td><?php echo $row["SoLuotXem"]; ?></td>
+						</tr>
+						<tr>
+							<th>Số lượng bán</th>
+							<td><?php echo $row["SoLuongBan"]; ?></td>
+						</tr>
+						<tr>
+							<th>Mô tả</th>
+							<td><?php echo $row["MoTa"]; ?></td>
+						</tr>
+						<tr>
+							<th>Nhà sản xuất </th>
+							<td><?php echo $row["TenHangSanXuat"]; ?></td>
+						</tr>
+						<tr>
+							<th>Loại sản phẩm</th>
+							<td><?php echo $row["TenLoaiSanPham"]; ?></td>
+						</tr>
+						<tr>
+							<th>Hình ảnh minh họa</th>
+							<td><img src="images/<?php echo $row["HinhURL"]; ?>" width="60" height="60" alt=""></td>
+						</tr>
+						<?php if ($isLogged == true) { ?>
+							<tr>
+								<td>
+									<input type="submit" name="btnAddCart" value="Thêm vào giỏ hàng">
+								</td>
+							</tr>
+						<?php } 
+						$sql = "update SanPham set SoLuotXem=" . ((int)$row["SoLuotXem"] + 1) . " where MaSanPham = '" . $row["MaSanPham"] . "' ";
+						DataProvider::execQ($sql);
+					} ?>
+				</table>
+			</form>
+		</div>
+		<br />
+		<div class="container">
+			<h2>Các sản phẩm liên quan</h2>
+			<p>Danh sách 5 sản phẩm bán liên quan:</p>
+			<table>
+				<col width="50%">
+				<col width="50%">
+				<?php
+				$sql = "select * from SanPham where MaLoaiSanPham = ( select MaLoaiSanPham from SanPham where MaSanPham = '" . $_GET["itemID"] . "' ) LIMIT 5";
+				$list = DataProvider::execQuery($sql);
+				while ($row = mysqli_fetch_array($list)) {
+					?>
+					<tr>
+						<td>
+							<img src="images/<?php echo $row["HinhURL"]; ?>" width="60" height="60" alt="">
+						</td>
+						<td>
+							<a class="nav-link" href="detail.php?itemID=<?php echo $row['MaSanPham'] . $itemUrl ?>"><?php echo $row['TenSanPham'] ?></a>
+						</td>
+					</tr>
+				<?php } ?>
+			</table>
+		</div>
+	</body>
+	</html>

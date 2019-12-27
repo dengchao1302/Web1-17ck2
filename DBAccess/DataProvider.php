@@ -27,11 +27,9 @@
                 return 0;
             }
             if($connection->query($sql) == true){
-                echo "Successfully";
                 return 1;
             }
             else {
-                 echo "Error updating record: " . $connection->error;
                  return 0;
             }
             $connection->close();

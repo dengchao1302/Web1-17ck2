@@ -86,49 +86,51 @@
 	<div class="container">
 		<h2>Sản phẩm mới nhất</h2>
 		<p>Danh sách 10 sản phẩm mới nhất:</p>
-		<ul class="nav">
-			<?php
+		<table>
+			<col width="50%">
+			<col width="50%">
+			<tr>
+				<?php
 			$i = 0;
 			while ($row = mysqli_fetch_array($listSPnew)) {
 				$i++;
 				?>
-				<li class="nav-item">
-					<a class="nav-link" href="detail.php?itemID=<?php echo $row["MaSanPham"] . $itemUrl; ?>"><?php echo $row["TenSanPham"]; ?></a>
-				</li>
-				<?php
-				if ($i == 5) {
-					?>	
-				</ul>
-				<ul class="nav">
-					<?php 
-				}
-			}
-			?>
-		</ul>
+				<td>
+					<img src="images/<?php echo $row["HinhURL"]; ?>" width="60" height="60" alt="">
+					<a class="nav-link navbar-text" href="detail.php?itemID=<?php echo $row["MaSanPham"] . $itemUrl; ?>"><?php echo $row["TenSanPham"]; ?></a>
+				</td>
+				<?php if ($i %2 == 0) { ?>
+				</tr>
+				<tr>
+				<?php }
+			} ?>
+			</tr>
+		</table>
 	</div>
 	<br/>
 	<div class="container">
 		<h2>Sản phẩm bán chạy nhất</h2>
 		<p>Danh sách 10 sản phẩm bán chạy nhất:</p>
-		<ul class="nav">
-			<?php
+		<table>
+			<col width="50%">
+			<col width="50%">
+			<tr>
+				<?php
 			$i = 0;
 			while ($row = mysqli_fetch_array($listSPhot)) {
 				$i++;
 				?>
-				<li class="nav-item">
-					<a class="nav-link" href="detail.php?itemID=<?php echo $row["MaSanPham"]; ?>"><?php echo $row["TenSanPham"]; ?></a>
-				</li>
-				<?php
-				if ($i == 5) {
-					?>	
-				</ul>
-				<ul class="nav">
-					<?php 
-				}
-			}
-			?>
-		</ul>
+				<td>
+					<img src="images/<?php echo $row["HinhURL"]; ?>" width="60" height="60" alt="">
+					<a class="nav-link navbar-text" href="detail.php?itemID=<?php echo $row["MaSanPham"] . $itemUrl; ?>"><?php echo $row["TenSanPham"]; ?></a>
+				</td>
+				<?php if ($i %2 == 0) { ?>
+				</tr>
+				<tr>
+				<?php }
+			} ?>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
